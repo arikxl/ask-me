@@ -1,7 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
+// import { useSelector } from 'react-redux';
 
-const Home = () => {
+// import {handleSteps} from '../index';
 
+const Home = ({setStep}) => {
+
+    // const step  = useSelector((state => state.step))
     const textInput = useRef();
     const [showBtn, setShowBtn] = useState(false);
     const [showError, setShowError] = useState(false);
@@ -11,6 +15,7 @@ const Home = () => {
             setShowBtn(true);
         } else {
             setShowBtn(false);
+            // handleSteps(1)
         }
     };
 
@@ -18,6 +23,7 @@ const Home = () => {
         const question = textInput.current.value;
         if (question.length > 30) {
             setShowError(true)
+            setStep(1)
             return false
         };
     };
