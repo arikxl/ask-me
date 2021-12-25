@@ -37,9 +37,9 @@ const Home = () => {
                 className="form-control"
                 />
 
-            {showBtn &&
+            {showBtn && !showError &&
                 <Link to={!showError ? "/confirm" : '/'}>
-                    <button className="btn">
+                    <button className="btn animate__animated animate__fadeIn">
                         Next
                     </button>
                 </Link>
