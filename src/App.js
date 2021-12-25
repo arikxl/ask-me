@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <div className="container">
             <Routes>
-              <Route path="/Ask-Me" element={<Home />} />
+              <Route path="/ask-me" element={<Home />} />
               <Route path="/confirm" element={<Confirm />} />
               <Route path="/answer" element={<Answer />} />
             </Routes>

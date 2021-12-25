@@ -22,7 +22,7 @@ const Confirm = () => {
                              תן לי תשובה בבקשה
                         </button>
                     </Link>
-                    <Link to={"/Ask-Me"}>
+                    <Link to={"/ask-me"}>
                         <button className="btn">
                             שאלה חדשה
                         </button>

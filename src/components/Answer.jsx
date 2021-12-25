@@ -34,7 +34,7 @@ const Answer = () => {
                 <button className="btn" onClick={() => changeAnswer()}>
                      תשובה חדשה בבקשה
                 </button>
-                <Link to={"/Ask-Me"}>
+                <Link to={"/ask-me"}>
                     <button className="btn" onClick={() => context.setReset()}>
                         להתחיל שוב
                     </button>

@@ -1,6 +1,6 @@
 {
-  "name": "Ask-Me",
-  "homepage": "https://arikxl.github.io/Ask-Me",
+  "name": "ask-me",
+  "homepage": "https://arikxl.github.io/ask-me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
