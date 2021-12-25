@@ -1,10 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 import { useContext } from 'react';
+
 import { MyContext } from './context';
-
-
-
 
 const Home = () => {
     
@@ -17,6 +16,9 @@ const Home = () => {
         const question = textInput.current.value;
         if (question.length > 30) {
             setShowError(true)
+            toast('🦄השאלה ארוכה מדי',{
+                position: toast.POSITION.TOP_RIGHT
+            })
         } else {
             setShowError(false)
         }
@@ -30,24 +32,17 @@ const Home = () => {
     
     return (
         <div>
-            <h1>Ask a question</h1>
+            <h1>מה השאלה שלך?</h1>
             <input type="text" ref={textInput}
                 onChange={handleChange}
                 name="question"
-                className="form-control"
-                />
-
+                className="form-control"/>
             {showBtn && !showError &&
                 <Link to={!showError ? "/confirm" : '/'}>
                     <button className="btn animate__animated animate__fadeIn">
-                        Next
+                        בואו נגלה
                     </button>
                 </Link>
-            }
-            {showError &&
-                <div className="error">
-                    The question is too long
-                </div>
             }
         </div>
     );

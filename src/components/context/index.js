@@ -1,6 +1,14 @@
 import React from 'react'
 
-export const answers = [ 'Yes', 'No', 'Maybe', 'Not sure... Try again', 'Call the police']
+export const answers = [
+     'כן', 'לא', 'אולי', 'לא בטוח... שווה לנסות שוב', 'כדאי לקרוא למשטרה'
+    ,'עדיף לשאול את ההורים','בטח!','אין סיכוי','לא לבנות על זה','כנראה שכן','התשובה נמצאת בך',
+    'בוודאות','אין ספק שזה יקרה','כנראה שלא','הסימנים מראים שכן','עדיף לשאול מאוחר יותר',
+    'עדיף לא לדעת עכשיו','אי אפשר לדעת','ממש ממש לא!','המקורות שלי אומרים שלא',
+    'בספק מאוד','ככה ככה','בוודאי','לא כדאי','חבר טוב יתן לך את התשובה','👍🏻','👎🏻',
+    'עדיף להתרכז בלימודים','עדיף לישון על זה','נחליט מחר','זה יקרה ב100%','השאלה לא טובה',
+    'לך/י עם התחושות שלך','מה שיהיה יהיה'
+]
 export const MyContext = React.createContext();
 
 const MyProvider = (props) => {

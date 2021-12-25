@@ -24,7 +24,7 @@ const Answer = () => {
 
     return (
         <div>
-            <h3>Your answer is:</h3>
+            <h3>התשובה שלך היא:</h3>
             <div className="viewer">
                 {answer}
             </div>
@@ -32,14 +32,13 @@ const Answer = () => {
              animate__bounceIn animate__delay-1s">
                 <hr />
                 <button className="btn" onClick={() => changeAnswer()}>
-                    Give me a new answer
+                     תשובה חדשה בבקשה
                 </button>
                 <Link to={"/"}>
                     <button className="btn" onClick={() => context.setReset()}>
-                        Start over
+                        להתחיל שוב
                     </button>
                 </Link>
-
             </div>
 
         </div>
