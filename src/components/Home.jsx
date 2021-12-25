@@ -1,8 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import { MyContext } from './context';
+
+
+
 
 const Home = () => {
-
+    
+    const context = useContext(MyContext); 
     const textInput = useRef();
     const [showBtn, setShowBtn] = useState(false);
     const [showError, setShowError] = useState(false);
@@ -19,8 +25,9 @@ const Home = () => {
         } else {
             setShowBtn(false);
         };
+        context.setQuestion(question);
     };
-
+    
     return (
         <div>
             <h1>Ask a question</h1>
@@ -28,7 +35,7 @@ const Home = () => {
                 onChange={handleChange}
                 name="question"
                 className="form-control"
-            />
+                />
 
             {showBtn &&
                 <Link to={!showError ? "/confirm" : '/'}>
